@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Information</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="photon.min.css" />
+
+  </head>
+
+  <style>
+    * {
+      font-family: 'Open Sans', sans-serif;
+      box-sizing: border-box;
+      margin: 0; 
+      font-size: 120%;
+
+    }
+    
+    body{
+      background-color: aquamarine;
+      background-image: url(https://www.paragliding-flights-dolomites.com/summer-flights/pano2/pano2.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .h1{
+      text-align: center;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+    
+    li {
+      float: left;
+      border-right:1px solid #bbb;
+    }
+    
+    li:last-child {
+      border-right: none;
+    }
+    
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+    
+    .active {
+      background-color: #04AA6D;
+    }
+  
+
+  </style>
+
+  <body>
+
+    <ul>
+
+      <li><a href="home.html">Home</a></li>
+      <li><a href="#">Feedback</a></li>
+      <li style="float:right"><a href="#"  onclick="self.close()" >Exit</a></li>
+      
+    </ul>
+
+    <div class="mainWrapper">
+    
+      <h1 class="h1">Tell About Your Experience</h1>
+
+      <form>
+        <div class="form-group">
+          <label>File name</label>
+          <input id="fileName" type="text" class="form-control" placeholder="Enter File Name With .txt">
+        </div>
+
+        <div class="form-group">
+          <label>Your Experience</label>
+          <textarea id="fileContents" class="form-control" placeholder="Enter Your Experience Paragliding" rows="5"></textarea>
+
+        </div>
+      </form>
+      <button id="btnCreate" class="btn btn-default">Create</button>
+      <button id="btnRead" class="btn btn-default">Read</button>
+      <button id="btnDelete" class="btn btn-default">Delete</button>
+      <button id="btnUpdate" class="btn btn-default">Update</button>
+      
+
+    
+    </div>
+
+    
+
+    <script src="main.js">
+      
+      
+    </script>
+  </body>
+</html>

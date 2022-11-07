@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Welcome To App Paragliding </title>
+</head>
+
+<style>
+  *{
+    box-sizing: border-box;
+  }
+body{
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: #222;
+    background-image: url('https://images.unsplash.com/photo-1625457672610-929a21cc2eef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+    font-size: 120%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+    border-right:1px solid #bbb;
+  }
+  
+  li:last-child {
+    border-right: none;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+  }
+  .card {
+    background: #000000d0;
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 420px;
+    margin: 1em;
+  }
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+    border-radius: 18px;
+    color: rgb(29, 21, 21);
+    font-family: inherit;
+    font-size: 90%;
+  }
+  .button{
+      margin: 0.5em;
+      border-radius: 50%;
+      border: none;
+      height: 44px;
+      width: 44px;
+      outline: none;
+      background: #7c7c7c2b;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+    }
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 10px;
+      height: 300px;
+      text-align: center; /* Should be removed. Only for demonstration */
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .text{
+      text-align: center;
+      color: white;
+    }
+    .card{
+      
+      text-align: left;
+      margin: auto;
+      height: auto;
+      
+    }
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      width: 100%;
+      border: 1px solid rgb(99, 96, 96);
+    }
+    
+    th, td {
+      text-align: left;
+      padding: 16px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: rgb(99, 96, 96);
+    }
+    .title{
+      text-align: center;
+      background: linear-gradient(to right,#F6F0EA,#F1DFD1);      
+      color: #333;
+      margin-top: auto;
+    }
+    .row li{
+      text-align: center;
+      background-color: aqua;
+    }
+  
+
+
+</style>
+
+<body>
+
+  <ul>
+
+    <li><a href="#">Home</a></li>
+    <li><a href="feedback.html">Experience</a></li>
+    <li style="float:right"><a href="#" onclick="self.close()">Exit</a></li>
+    
+  </ul>
+
+  <h1 class="title">Safe Paraglide</h1>
+    <hr>
+  
+  <div class="card">
+      <div class="search">
+      <input class="search" type="text" placeholder="Place To Paragliding" id="city_input">
+      <button onclick="buttonClicked()"> Search </button>
+      </div>
+      
+  <table>
+    <tr>
+      <th>Country         </th>
+      <th><div id="country"></div></th>
+    </tr>
+    <tr>
+      <th>Wind Degree     </th>
+      <th><div id="winddeg"></div></th>
+    </tr>
+    <tr>
+      <th>Wind Direction  </th>
+      <th><div id="winddir"></div></th>
+    </tr>
+    <tr>
+      <th>Wind MPH        </th>
+      <th><div id="windmph"></div></th>
+    </tr>
+    <tr>
+      <th>Weather         </th>
+      <th><div id="weather"></div></th>
+    </tr>
+  </table>
+  </div>
+
+  <div class="text">
+  <h2>The Best Place For Paragliding</h2>
+  </div>
+<div class="row">
+  <div class="column" >
+    <p>Queenstown, New Zealand</p>
+    <img src="https://images.unsplash.com/photo-1625457672404-67a2ffb2d75e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="429" height="286">
+    <li>The South Island town of Queenstown is often referred to as New Zealand's adventure capital because of all the adventure sports available here: whitewater rafting, hiking, bungee jumping, skiing, jet boating, and, of course, paragliding.
+      Surrounded by the Remarkables range of the Southern Alps, on one side of Lake Wakatipu, Queenstown's geography allows for fabulous views from the air, and the thermals and winds coming off the mountains means it's sometimes possible to fly for a long time. (New Zealand paragliding champion Louis Tapper set a record in early 2020 with an eight-hour flight!) Paragliding is possible in Queenstown year-round, but winters are cold.</li>
+  </div>
+  <div class="column" >
+    <p>Umbria, Italy</p>
+    <img src="https://images.says.com/uploads/story_source/source_image/948042/accf.jpg" width="429" height="286">
+    <li>The Umbrian village of Castelluccio is the highest-altitude village in the Appenine mountains, at 4,763 feet. The updrafts created by the meeting of the plains and mountains make this one of the best places in Italy to try paragliding.
+      As well as the mountain views that one should expect when paragliding almost anywhere in the world, Castelluccio offers something different. The hills and valleys around the town are covered in colorful wildflowers in the spring and summer (especially May and June), which are especially lovely to see from above.</li>
+  </div>
+  <div class="column" >
+    <p>Bukit Bubus, Malaysia</p>
+    <img src="https://i0.wp.com/www.paragliders.my/wp-content/uploads/2022/08/AndreBandarra.png?fit=1588%2C894&ssl=1" width="429" height="286">
+    <li>Terengganu is quite popular with beautiful and interesting eco tourism locations. Did you know that Terengganu also has one of the most beautiful paragliding spots in peninsular Malaysia . The location is at Bukit Bubus, which is located in Besut district which is just next to Bukit Keluang which is very popular among hikers .Bukit Bubus is a craze for paragliders because the atmosphere and scenery are quite impressive. Here, you can fly in the clouds while enjoying the beautiful view of the green hills next to the blue-green sea.This paragliding activity is very dependent on the weather and wind there</li>
+  </div>
+</div>
+<br><br><br><br>
+
+    
+</body>
+
+  <script src="weather.js"></script>
+
+</html>
